@@ -289,7 +289,7 @@ describe("neo-convert production invariants", () => {
   });
 
   it("keeps the manifest, storage boundary, artwork, and documentation aligned", () => {
-    const root = `${process.cwd()}/../neo-convert`;
+    const root = `${process.cwd()}/apps/neo-convert`;
     const manifest = JSON.parse(fs.readFileSync(`${root}/neo-manifest.json`, "utf8"));
     const converterSource = fs.readFileSync(`${root}/src/composables/useConverter.ts`, "utf8");
     const appSource = fs.readFileSync(`${root}/src/composables/useNeoConvert.ts`, "utf8");

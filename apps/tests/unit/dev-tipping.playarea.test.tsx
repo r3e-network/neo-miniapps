@@ -181,7 +181,7 @@ describe("dev-tipping PlayArea (v2)", () => {
   it("retires the generic operation form and documents stateful recovery", () => {
     const fs = require("node:fs");
     const manifest = JSON.parse(
-      fs.readFileSync(`${process.cwd()}/../dev-tipping/neo-manifest.json`, "utf8"),
+      fs.readFileSync(`${process.cwd()}/apps/dev-tipping/neo-manifest.json`, "utf8"),
     );
     expect(manifest.operation_panel.operations).toEqual([]);
     expect(manifest.features.stateless).toBe(false);
@@ -191,8 +191,8 @@ describe("dev-tipping PlayArea (v2)", () => {
 
   it("has reduced-motion and keeps the support scene foreground-led", () => {
     const fs = require("node:fs");
-    const styles = fs.readFileSync(`${process.cwd()}/../dev-tipping/src/PlayArea.scss`, "utf8");
-    const source = fs.readFileSync(`${process.cwd()}/../dev-tipping/src/PlayArea.tsx`, "utf8");
+    const styles = fs.readFileSync(`${process.cwd()}/apps/dev-tipping/src/PlayArea.scss`, "utf8");
+    const source = fs.readFileSync(`${process.cwd()}/apps/dev-tipping/src/PlayArea.tsx`, "utf8");
     const { container } = render(<PlayArea t={t} state={state()} dispatch={vi.fn()} />);
 
     expect(container.querySelector(".tip-scene__backdrop")).toBeNull();

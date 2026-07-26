@@ -22,11 +22,11 @@ function state(o: Partial<Record<string, unknown>> = {}): ObservableState {
 }
 
 function source() {
-  return fs.readFileSync(`${process.cwd()}/../private-transfer/src/PlayArea.tsx`, "utf8") as string;
+  return fs.readFileSync(`${process.cwd()}/apps/private-transfer/src/PlayArea.tsx`, "utf8") as string;
 }
 
 function stylesheet() {
-  return fs.readFileSync(`${process.cwd()}/../private-transfer/src/PlayArea.scss`, "utf8") as string;
+  return fs.readFileSync(`${process.cwd()}/apps/private-transfer/src/PlayArea.scss`, "utf8") as string;
 }
 
 describe("private-transfer privacy airlock", () => {
@@ -62,7 +62,7 @@ describe("private-transfer privacy airlock", () => {
   it("keeps the generated privacy-airlock hierarchy, motion guard, and short-screen layout", () => {
     const s = stylesheet();
     const playAreaSource = source();
-    const config = fs.readFileSync(`${process.cwd()}/../private-transfer/src/appConfig.ts`, "utf8");
+    const config = fs.readFileSync(`${process.cwd()}/apps/private-transfer/src/appConfig.ts`, "utf8");
 
     expect(playAreaSource).toContain('@shared/components-react/v2/PlayStage');
     expect(playAreaSource).not.toContain('@shared/components-react/v2"');

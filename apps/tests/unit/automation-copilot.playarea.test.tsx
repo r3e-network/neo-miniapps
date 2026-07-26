@@ -132,7 +132,7 @@ describe("automation-copilot PlayArea (v2)", () => {
 
   it("keeps automation styling foreground-led, animated, and motion guarded", () => {
     const fs = require("node:fs");
-    const s = fs.readFileSync(`${process.cwd()}/../automation-copilot/src/PlayArea.scss`, "utf8");
+    const s = fs.readFileSync(`${process.cwd()}/apps/automation-copilot/src/PlayArea.scss`, "utf8");
 
     expect(s).toContain('@use "@shared/components-react/v2/v2" as *;');
     expect(s).toMatch(/prefers-reduced-motion/);

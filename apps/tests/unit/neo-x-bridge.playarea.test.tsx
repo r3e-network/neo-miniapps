@@ -175,10 +175,10 @@ describe("neo-x-bridge PlayArea (v2)", () => {
 
   it("keeps the survey-style generic operation panel and incomplete MessageBridge action retired", () => {
     const fs = require("node:fs");
-    const manifest = JSON.parse(fs.readFileSync(`${process.cwd()}/../neo-x-bridge/neo-manifest.json`, "utf8"));
-    const config = fs.readFileSync(`${process.cwd()}/../neo-x-bridge/src/appConfig.ts`, "utf8");
-    const main = fs.readFileSync(`${process.cwd()}/../neo-x-bridge/src/main.tsx`, "utf8");
-    const bridgeConsole = fs.readFileSync(`${process.cwd()}/../neo-x-bridge/src/bridgeConsole.ts`, "utf8");
+    const manifest = JSON.parse(fs.readFileSync(`${process.cwd()}/apps/neo-x-bridge/neo-manifest.json`, "utf8"));
+    const config = fs.readFileSync(`${process.cwd()}/apps/neo-x-bridge/src/appConfig.ts`, "utf8");
+    const main = fs.readFileSync(`${process.cwd()}/apps/neo-x-bridge/src/main.tsx`, "utf8");
+    const bridgeConsole = fs.readFileSync(`${process.cwd()}/apps/neo-x-bridge/src/bridgeConsole.ts`, "utf8");
 
     expect(manifest.operation_panel.operations).toEqual([]);
     expect(manifest.stateSource).toBeUndefined();
@@ -295,7 +295,7 @@ describe("neo-x-bridge PlayArea (v2)", () => {
 
   it("keeps bridge styling foreground-led, animated, and motion guarded", () => {
     const fs = require("node:fs");
-    const s = fs.readFileSync(`${process.cwd()}/../neo-x-bridge/src/PlayArea.scss`, "utf8");
+    const s = fs.readFileSync(`${process.cwd()}/apps/neo-x-bridge/src/PlayArea.scss`, "utf8");
 
     expect(s).toContain('@use "@shared/components-react/v2/v2" as *;');
     expect(s).toMatch(/prefers-reduced-motion/);

@@ -132,9 +132,9 @@ describe("trustanchor-admin PlayArea", () => {
   });
 
   it("keeps the admin surface foreground-led and free of global backdrop patches", () => {
-    const styles = readFileSync(`${process.cwd()}/components-react/v2/anchor-admin/_workspace.scss`, "utf8");
-    const theme = readFileSync(`${process.cwd()}/../trustanchor-admin/src/PlayArea.scss`, "utf8");
-    const source = readFileSync(`${process.cwd()}/../trustanchor-admin/src/PlayArea.tsx`, "utf8");
+    const styles = readFileSync(`${process.cwd()}/node_modules/@r3e-network/neo-miniapp-shared/components-react/v2/anchor-admin/_workspace.scss`, "utf8");
+    const theme = readFileSync(`${process.cwd()}/apps/trustanchor-admin/src/PlayArea.scss`, "utf8");
+    const source = readFileSync(`${process.cwd()}/apps/trustanchor-admin/src/PlayArea.tsx`, "utf8");
 
     expect(theme).toContain('@use "@shared/components-react/v2/anchor-admin/workspace" as *;');
     expect(theme).toContain('--admin-canvas: #f7fbff;');
@@ -150,7 +150,7 @@ describe("trustanchor-admin PlayArea", () => {
   });
 
   it("has reduced-motion guards for the route workspace", () => {
-    const styles = readFileSync(`${process.cwd()}/components-react/v2/anchor-admin/_workspace.scss`, "utf8");
+    const styles = readFileSync(`${process.cwd()}/node_modules/@r3e-network/neo-miniapp-shared/components-react/v2/anchor-admin/_workspace.scss`, "utf8");
 
     expect(styles).toContain("@media (prefers-reduced-motion: reduce)");
     expect(styles).toMatch(/animation-duration:\s*0\.001ms/);

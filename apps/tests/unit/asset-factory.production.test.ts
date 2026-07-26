@@ -231,7 +231,7 @@ describe("Asset Factory production safety", () => {
     };
 
     expect(manifest.supported_networks).toEqual(["neo-n3-testnet"]);
-    expect(manifest.version).toBe("1.2.0");
+    expect(manifest.version).toBe("1.2.1");
     expect(manifest.features.stateless).toBe(false);
     expect(manifest.contracts["neo-n3-testnet"]).toMatch(/^0x[a-f0-9]{40}$/);
     expect(manifest.permissions).toEqual([

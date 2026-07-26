@@ -38,7 +38,7 @@ describe("timestamp-proof integration: dispatch + state", () => {
   });
   it("has reduced-motion CSS guard", () => {
     const fs = require("node:fs");
-    const s = fs.readFileSync(`${process.cwd()}/../timestamp-proof/src/PlayArea.scss`, "utf8");
+    const s = fs.readFileSync(`${process.cwd()}/apps/timestamp-proof/src/PlayArea.scss`, "utf8");
     expect(s).toMatch(/prefers-reduced-motion/);
   });
 });

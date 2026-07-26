@@ -26,7 +26,7 @@ describe("oracle-http-console integration: dispatch + state", () => {
   });
   it("has reduced-motion CSS guard", () => {
     const fs = require("node:fs");
-    const s = fs.readFileSync(`${process.cwd()}/../oracle-http-console/src/PlayArea.scss`, "utf8");
+    const s = fs.readFileSync(`${process.cwd()}/apps/oracle-http-console/src/PlayArea.scss`, "utf8");
     expect(s).toMatch(/prefers-reduced-motion/);
   });
 });

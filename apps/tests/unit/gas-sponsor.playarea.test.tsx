@@ -153,8 +153,8 @@ describe("gas-sponsor on-chain station PlayArea", () => {
 
   it("uses lightweight semantic controls and responsive/reduced-motion styles", () => {
     const fs = require("node:fs");
-    const source = fs.readFileSync(`${process.cwd()}/../gas-sponsor/src/PlayArea.tsx`, "utf8");
-    const styles = fs.readFileSync(`${process.cwd()}/../gas-sponsor/src/PlayArea.scss`, "utf8");
+    const source = fs.readFileSync(`${process.cwd()}/apps/gas-sponsor/src/PlayArea.tsx`, "utf8");
+    const styles = fs.readFileSync(`${process.cwd()}/apps/gas-sponsor/src/PlayArea.scss`, "utf8");
 
     expect(source).toContain("OpenUiLiteSegmented");
     expect(source).toContain("OpenUiLiteTextField");

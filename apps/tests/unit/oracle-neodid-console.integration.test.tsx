@@ -29,7 +29,7 @@ const setupHarness = vi.hoisted(() => ({
 
 vi.mock("@shared/react/defineMiniApp", async () => {
   const actual = await vi.importActual<typeof import("@shared/react/defineMiniApp")>(
-    "../react/defineMiniApp",
+    "@shared/react/defineMiniApp",
   );
   return {
     ...actual,

@@ -511,15 +511,15 @@ describe("Neo Treasury PlayArea (v2 scene-driven)", () => {
   });
 
   it("keeps motion backed by reduced-motion fallbacks", () => {
-    const styles = readFileSync(`${process.cwd()}/../neo-treasury/src/PlayArea.scss`, "utf8");
+    const styles = readFileSync(`${process.cwd()}/apps/neo-treasury/src/PlayArea.scss`, "utf8");
     expect(styles).toContain("@use \"@shared/styles/v2/motion\"");
     expect(styles).toContain("@media (prefers-reduced-motion: reduce)");
     expect(styles).toMatch(/@media \(prefers-reduced-motion: reduce\)[\s\S]*animation-duration:\s*0\.001ms/);
   });
 
   it("keeps treasury balances on a clean foreground dashboard", () => {
-    const styles = readFileSync(`${process.cwd()}/../neo-treasury/src/PlayArea.scss`, "utf8");
-    const source = readFileSync(`${process.cwd()}/../neo-treasury/src/PlayArea.tsx`, "utf8");
+    const styles = readFileSync(`${process.cwd()}/apps/neo-treasury/src/PlayArea.scss`, "utf8");
+    const source = readFileSync(`${process.cwd()}/apps/neo-treasury/src/PlayArea.tsx`, "utf8");
 
     expect(styles).toMatch(/\.treasury-scene\s*\{[\s\S]*background:\s*#ffffff/);
     expect(styles).toMatch(/\.treasury-scene__art\s*\{[\s\S]*background:\s*#f8fcfb/);

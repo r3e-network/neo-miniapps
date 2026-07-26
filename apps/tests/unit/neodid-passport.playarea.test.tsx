@@ -287,8 +287,8 @@ describe("neodid-passport PlayArea production surface", () => {
   });
 
   it("implements clean contrast, restrained action sizing, responsive layout, and reduced motion", () => {
-    const scss = readFileSync(`${process.cwd()}/../neodid-passport/src/PlayArea.scss`, "utf8");
-    const source = readFileSync(`${process.cwd()}/../neodid-passport/src/PlayArea.tsx`, "utf8");
+    const scss = readFileSync(`${process.cwd()}/apps/neodid-passport/src/PlayArea.scss`, "utf8");
+    const source = readFileSync(`${process.cwd()}/apps/neodid-passport/src/PlayArea.tsx`, "utf8");
 
     expect(scss).toMatch(/\.mx2-stage,[\s\S]*width:\s*min\(100%,\s*980px\)/);
     expect(scss).toMatch(/\.mx2-btn--primary[\s\S]*max-width:\s*min\(100%,\s*224px\)/);
@@ -306,10 +306,10 @@ describe("neodid-passport PlayArea production surface", () => {
   });
 
   it("keeps the manifest and runtime truthful about state, networks, and writes", () => {
-    const manifest = JSON.parse(readFileSync(`${process.cwd()}/../neodid-passport/neo-manifest.json`, "utf8"));
-    const main = readFileSync(`${process.cwd()}/../neodid-passport/src/main.tsx`, "utf8");
-    const passport = readFileSync(`${process.cwd()}/../neodid-passport/src/passport.ts`, "utf8");
-    const readme = readFileSync(`${process.cwd()}/../neodid-passport/README.md`, "utf8");
+    const manifest = JSON.parse(readFileSync(`${process.cwd()}/apps/neodid-passport/neo-manifest.json`, "utf8"));
+    const main = readFileSync(`${process.cwd()}/apps/neodid-passport/src/main.tsx`, "utf8");
+    const passport = readFileSync(`${process.cwd()}/apps/neodid-passport/src/passport.ts`, "utf8");
+    const readme = readFileSync(`${process.cwd()}/apps/neodid-passport/README.md`, "utf8");
 
     expect(manifest.supported_networks).toEqual(["neo-n3-mainnet", "neo-n3-testnet"]);
     expect(manifest.features.stateless).toBe(false);

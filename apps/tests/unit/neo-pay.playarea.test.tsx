@@ -24,7 +24,7 @@ function source() {
 }
 
 function messages() {
-  return fs.readFileSync(`${sharedRoot()}/composables/neo-pay/messages.ts`, "utf8") as string;
+  return fs.readFileSync(`${process.cwd()}/node_modules/@r3e-network/neo-miniapp-shared/composables/neo-pay/messages.ts`, "utf8") as string;
 }
 
 describe("neo-pay PlayArea (v2)", () => {

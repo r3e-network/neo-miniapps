@@ -189,8 +189,8 @@ describe("aa-market-hub designed marketplace", () => {
 
 describe("aa-market-hub visual production locks", () => {
   it("uses a bright high-contrast responsive marketplace composition", () => {
-    const styles = readFileSync(`${process.cwd()}/../aa-market-hub/src/PlayArea.scss`, "utf8");
-    const source = readFileSync(`${process.cwd()}/../aa-market-hub/src/PlayArea.tsx`, "utf8");
+    const styles = readFileSync(`${process.cwd()}/apps/aa-market-hub/src/PlayArea.scss`, "utf8");
+    const source = readFileSync(`${process.cwd()}/apps/aa-market-hub/src/PlayArea.tsx`, "utf8");
 
     expect(styles).toMatch(/\.aa-market-scene\s*\{[\s\S]*?background:\s*transparent/);
     expect(styles).toMatch(/\.aa-market-layout\s*\{[\s\S]*?grid-template-columns:/);

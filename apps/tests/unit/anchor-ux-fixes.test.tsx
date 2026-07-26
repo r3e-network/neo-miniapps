@@ -23,10 +23,10 @@ describe("Anchor admin PlayAreas (v2)", () => {
   });
   it("has reduced-motion in both admin apps", () => {
     const fs = require("node:fs");
-    const shared = fs.readFileSync(`${process.cwd()}/components-react/v2/anchor-admin/_workspace.scss`, "utf8");
+    const shared = fs.readFileSync(`${process.cwd()}/node_modules/@r3e-network/neo-miniapp-shared/components-react/v2/anchor-admin/_workspace.scss`, "utf8");
     expect(shared).toMatch(/prefers-reduced-motion/);
     for (const app of ["profitanchor-admin", "trustanchor-admin"]) {
-      const s = fs.readFileSync(`${process.cwd()}/../${app}/src/PlayArea.scss`, "utf8");
+      const s = fs.readFileSync(`${process.cwd()}/apps/${app}/src/PlayArea.scss`, "utf8");
       expect(s).toMatch(/anchor-admin\/workspace/);
     }
   });

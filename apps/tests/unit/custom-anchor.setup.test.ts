@@ -28,7 +28,7 @@ const harness = vi.hoisted(() => ({
 }));
 
 vi.mock("@shared/react/defineMiniApp", async () => {
-  const actual = await vi.importActual<typeof import("@shared/react/defineMiniApp")>("../react/defineMiniApp");
+  const actual = await vi.importActual<typeof import("@shared/react/defineMiniApp")>("@shared/react/defineMiniApp");
   return {
     ...actual,
     defineMiniApp: vi.fn((definition: unknown) => {
@@ -173,7 +173,7 @@ describe("custom-anchor production orchestration", () => {
   it("uses pinned contexts, durable tx capture, and exact outcome recovery surfaces", () => {
     const source = readFileSync(
       resolve(
-        process.cwd().endsWith("/apps/shared") ? process.cwd() : resolve(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared"),
+        resolve(process.cwd(), "apps/shared"),
         "../custom-anchor/src/main.tsx",
       ),
       "utf8",

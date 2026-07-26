@@ -183,8 +183,8 @@ describe("neo-convert PlayArea (v2)", () => {
 
   it("imports v2 styles and keeps the scene foreground-led", () => {
     const fs = require("node:fs");
-    const s = fs.readFileSync(`${process.cwd()}/../neo-convert/src/PlayArea.scss`, "utf8");
-    const source = fs.readFileSync(`${process.cwd()}/../neo-convert/src/PlayArea.tsx`, "utf8");
+    const s = fs.readFileSync(`${process.cwd()}/apps/neo-convert/src/PlayArea.scss`, "utf8");
+    const source = fs.readFileSync(`${process.cwd()}/apps/neo-convert/src/PlayArea.tsx`, "utf8");
 
     expect(source).toContain("OpenUiProvider");
     expect(source).toContain("OpenUiTextField");

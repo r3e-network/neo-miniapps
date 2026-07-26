@@ -64,7 +64,7 @@ function state(o: Partial<Record<string,unknown>> = {}): ObservableState {
 describe("Oracle Price Console PlayArea (v2)", () => {
   it("declares the exact read-only RPC surfaces without a host-generated operation form", () => {
     const fs = require("node:fs");
-    const manifest = JSON.parse(fs.readFileSync(`${process.cwd()}/../oracle-price-console/neo-manifest.json`, "utf8"));
+    const manifest = JSON.parse(fs.readFileSync(`${process.cwd()}/apps/oracle-price-console/neo-manifest.json`, "utf8"));
     expect(manifest.permissions).toEqual(["read:blockchain"]);
     expect(manifest.platform.transactions).toBe(false);
     expect(manifest.operation_panel.operations).toEqual([]);
@@ -140,8 +140,8 @@ describe("Oracle Price Console PlayArea (v2)", () => {
   });
   it("has clean foreground hierarchy and reduced-motion safeguards", () => {
     const fs = require("node:fs");
-    const s = fs.readFileSync(`${process.cwd()}/../oracle-price-console/src/PlayArea.scss`, "utf8");
-    const tsx = fs.readFileSync(`${process.cwd()}/../oracle-price-console/src/PlayArea.tsx`, "utf8");
+    const s = fs.readFileSync(`${process.cwd()}/apps/oracle-price-console/src/PlayArea.scss`, "utf8");
+    const tsx = fs.readFileSync(`${process.cwd()}/apps/oracle-price-console/src/PlayArea.tsx`, "utf8");
     expect(tsx).toContain("OpenUiSegmented");
     expect(tsx).toContain('dispatchSafely("fetchPrice")');
     expect(tsx).toContain(".catch(() => undefined)");
@@ -244,7 +244,7 @@ describe("Oracle Price Console PlayArea (v2)", () => {
     // As a descendant selector it also matched the skeleton's own <span>,
     // collapsing an em-sized shimmer to the 10px caption size.
     const fs = require("node:fs");
-    const s = fs.readFileSync(`${process.cwd()}/../oracle-price-console/src/PlayArea.scss`, "utf8");
+    const s = fs.readFileSync(`${process.cwd()}/apps/oracle-price-console/src/PlayArea.scss`, "utf8");
     expect(s).toMatch(/\.price-ticket__quote > span/);
     expect(s).not.toMatch(/\.price-ticket__quote span,/);
   });

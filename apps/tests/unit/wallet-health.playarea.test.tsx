@@ -238,9 +238,9 @@ describe("Wallet Health PlayArea", () => {
   });
 
   it("uses the real scanner asset in a compact responsive hierarchy", () => {
-    const styles = readFileSync(`${process.cwd()}/../wallet-health/src/PlayArea.scss`, "utf8");
-    const source = readFileSync(`${process.cwd()}/../wallet-health/src/PlayArea.tsx`, "utf8");
-    const assetPath = `${process.cwd()}/../wallet-health/public/wallet-health-scanner.webp`;
+    const styles = readFileSync(`${process.cwd()}/apps/wallet-health/src/PlayArea.scss`, "utf8");
+    const source = readFileSync(`${process.cwd()}/apps/wallet-health/src/PlayArea.tsx`, "utf8");
+    const assetPath = `${process.cwd()}/apps/wallet-health/public/wallet-health-scanner.webp`;
 
     expect(existsSync(assetPath)).toBe(true);
     expect(statSync(assetPath).size).toBeGreaterThan(40_000);

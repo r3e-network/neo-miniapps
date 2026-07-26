@@ -22,7 +22,7 @@ describe("Anchor user PlayAreas (v2)", () => {
   it("has reduced-motion in both", () => {
     const fs = require("node:fs");
     for (const app of ["profitanchor", "trustanchor"]) {
-      const s = fs.readFileSync(`${process.cwd()}/../${app}/src/PlayArea.scss`, "utf8");
+      const s = fs.readFileSync(`${process.cwd()}/apps/${app}/src/PlayArea.scss`, "utf8");
       expect(s).toMatch(/prefers-reduced-motion/);
     }
   });

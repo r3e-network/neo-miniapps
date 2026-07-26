@@ -154,8 +154,8 @@ describe("Neo NS PlayArea (v2)", () => {
 
   it("keeps the name service resource-led and away from flat form walls", () => {
     const fs = require("node:fs");
-    const s = fs.readFileSync(`${process.cwd()}/../neo-ns/src/PlayArea.scss`, "utf8");
-    const tsx = fs.readFileSync(`${process.cwd()}/../neo-ns/src/PlayArea.tsx`, "utf8");
+    const s = fs.readFileSync(`${process.cwd()}/apps/neo-ns/src/PlayArea.scss`, "utf8");
+    const tsx = fs.readFileSync(`${process.cwd()}/apps/neo-ns/src/PlayArea.tsx`, "utf8");
 
     expect(tsx).not.toMatch(/\bscore=\{/);
     expect(s).toContain("@media (prefers-reduced-motion: reduce)");

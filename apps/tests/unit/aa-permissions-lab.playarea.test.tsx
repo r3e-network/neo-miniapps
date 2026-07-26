@@ -155,11 +155,11 @@ describe("AA Permissions product surface", () => {
 
   it("uses bright, high-contrast, responsive styles with reduced-motion handling", () => {
     const styles = fs.readFileSync(
-      `${process.cwd()}/../aa-permissions-lab/src/PlayArea.scss`,
+      `${process.cwd()}/apps/aa-permissions-lab/src/PlayArea.scss`,
       "utf8",
     );
     const source = fs.readFileSync(
-      `${process.cwd()}/../aa-permissions-lab/src/PlayArea.tsx`,
+      `${process.cwd()}/apps/aa-permissions-lab/src/PlayArea.tsx`,
       "utf8",
     );
 

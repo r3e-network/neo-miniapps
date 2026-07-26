@@ -240,8 +240,8 @@ describe("Neo Multisig PlayArea (v3)", () => {
 
   it("keeps the multisig surface clean and resource-led", () => {
     const fs = require("node:fs");
-    const s = fs.readFileSync(`${process.cwd()}/../neo-multisig/src/PlayArea.scss`, "utf8");
-    const tsx = fs.readFileSync(`${process.cwd()}/../neo-multisig/src/PlayArea.tsx`, "utf8");
+    const s = fs.readFileSync(`${process.cwd()}/apps/neo-multisig/src/PlayArea.scss`, "utf8");
+    const tsx = fs.readFileSync(`${process.cwd()}/apps/neo-multisig/src/PlayArea.tsx`, "utf8");
     expect(s).toMatch(/prefers-reduced-motion/);
     expect(s).toMatch(/0\.001ms/);
     // #faf9f7 is the v4 canvas value the playarea-background-clarity governance

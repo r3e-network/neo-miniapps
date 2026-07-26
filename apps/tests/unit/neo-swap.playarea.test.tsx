@@ -341,8 +341,8 @@ describe("Neo Swap PlayArea (v2)", () => {
 
   it("guards against cross-miniapp style pollution and preserves reduced motion", () => {
     const fs = require("node:fs");
-    const scss = fs.readFileSync(`${process.cwd()}/../neo-swap/src/PlayArea.scss`, "utf8");
-    const source = fs.readFileSync(`${process.cwd()}/../neo-swap/src/PlayArea.tsx`, "utf8");
+    const scss = fs.readFileSync(`${process.cwd()}/apps/neo-swap/src/PlayArea.scss`, "utf8");
+    const source = fs.readFileSync(`${process.cwd()}/apps/neo-swap/src/PlayArea.tsx`, "utf8");
 
     expect(source).toContain("OpenUiProvider");
     expect(source).toContain("OpenUiSegmented");

@@ -26,7 +26,7 @@ describe("dev-tipping integration: dispatch + state", () => {
   });
   it("has reduced-motion CSS guard", () => {
     const fs = require("node:fs");
-    const s = fs.readFileSync(`${process.cwd()}/../dev-tipping/src/PlayArea.scss`, "utf8");
+    const s = fs.readFileSync(`${process.cwd()}/apps/dev-tipping/src/PlayArea.scss`, "utf8");
     expect(s).toMatch(/prefers-reduced-motion/);
   });
 });

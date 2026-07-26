@@ -4,9 +4,7 @@ import { describe, expect, it } from "vitest";
 import { manifest } from "../../wallet-health/src/manifest";
 
 function appFile(relativePath: string): string {
-  const sharedRoot = process.cwd().endsWith("/apps/shared")
-    ? process.cwd()
-    : resolve(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared");
+  const sharedRoot = resolve(process.cwd(), "apps/shared");
   return readFileSync(resolve(sharedRoot, `../wallet-health/${relativePath}`), "utf8");
 }
 
