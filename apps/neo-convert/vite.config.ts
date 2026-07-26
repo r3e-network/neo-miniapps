@@ -5,7 +5,7 @@ import path from "path";
 declare const __dirname: string;
 export default createReactAppConfig(__dirname, {
   alias: {
-    html2canvas: path.resolve(__dirname, "../shared/shims/html2canvas-stub.js"),
+    html2canvas: path.resolve(__dirname, "../../node_modules/@r3e-network/neo-miniapp-shared/shims/html2canvas-stub.js"),
   },
   plugins: [
     nodePolyfills({
