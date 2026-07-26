@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.r3e.network/miniapp-manifest/v1.json",
+  "id": "miniapp-miniapp-factory",
+  "name": "MiniApp Factory",
+  "name_zh": "小程序工厂",
+  "version": "1.1.0",
+  "description": "A bright visual studio for deterministic MiniApp starter packages, testnet template verification, wallet registration, refresh recovery, and operator handoff. Registration writes a Factory record; it does not deploy or publish a finished app.",
+  "description_zh": "明亮直观的小程序创建工作台，支持确定性启动包、测试网模板核验、钱包登记、刷新恢复和运营交接。登记只会写入 Factory 记录，不会部署或发布完整应用。",
+  "category": "tools",
+  "category_name": "Tools",
+  "category_name_zh": "工具",
+  "tags": ["factory", "miniapp", "template", "nep21", "onegate", "developer"],
+  "developer": {
+    "name": "Yiwu",
+    "email": "dev@r3e.network",
+    "website": "https://neomini.app"
+  },
+  "contracts": {
+    "neo-n3-testnet": "0x03a7c8fc724a575ee739c919ed52cb5e2a2bdc49"
+  },
+  "supported_networks": ["neo-n3-testnet"],
+  "default_network": "neo-n3-testnet",
+  "urls": {
+    "entry": "/miniapps/miniapp-factory/index.html",
+    "icon": "/miniapps/miniapp-factory/logo.webp",
+    "banner": "/miniapps/miniapp-factory/banner.webp"
+  },
+  "permissions": ["invoke:primary", "invoke:platform-factory", "wallet:sign-message", "read:blockchain"],
+  "features": {
+    "stateless": false,
+    "offlineSupport": false,
+    "deeplink": "neomainapp://miniapp-factory"
+  },
+  "platform": {
+    "analytics": true,
+    "comments": true,
+    "ratings": true,
+    "transactions": true
+  },
+  "technologies": {
+    "aa": {
+      "enabled": false,
+      "description": "Template plans can be submitted by AA later, but this standalone app does not require AA."
+    },
+    "tee": {
+      "enabled": false,
+      "description": "No private computation is required for deterministic miniapp planning."
+    },
+    "neodid": {
+      "enabled": false,
+      "description": "Developer identity can be layered on top by signing the generated template plan."
+    }
+  },
+  "createdAt": "2026-05-07T00:00:00Z",
+  "updatedAt": "2026-07-12T00:00:00Z",
+  "featured": false
+}
