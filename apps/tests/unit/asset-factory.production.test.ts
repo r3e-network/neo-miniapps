@@ -218,7 +218,7 @@ describe("Asset Factory production safety", () => {
   it("advertises only the read/sign capabilities the app actually exposes", () => {
     const manifest = JSON.parse(
       readFileSync(
-        resolve(process.cwd(), "../asset-factory/neo-manifest.json"),
+        resolve(process.cwd(), "apps/asset-factory/neo-manifest.json"),
         "utf8",
       ),
     ) as {
@@ -249,19 +249,19 @@ describe("Asset Factory production safety", () => {
 
   it("boots through the app-local safety setup and suppresses duplicate studio sections", () => {
     const main = readFileSync(
-      resolve(process.cwd(), "../asset-factory/src/main.tsx"),
+      resolve(process.cwd(), "apps/asset-factory/src/main.tsx"),
       "utf8",
     );
     const styles = readFileSync(
-      resolve(process.cwd(), "../asset-factory/src/AssetFactoryPlayArea.scss"),
+      resolve(process.cwd(), "apps/asset-factory/src/AssetFactoryPlayArea.scss"),
       "utf8",
     );
     const playArea = readFileSync(
-      resolve(process.cwd(), "../asset-factory/src/AssetFactoryPlayArea.tsx"),
+      resolve(process.cwd(), "apps/asset-factory/src/AssetFactoryPlayArea.tsx"),
       "utf8",
     );
     const index = readFileSync(
-      resolve(process.cwd(), "../asset-factory/index.html"),
+      resolve(process.cwd(), "apps/asset-factory/index.html"),
       "utf8",
     );
 
@@ -305,7 +305,7 @@ describe("Asset Factory production safety", () => {
 
   it("puts supply, decimals, policy, and Owner in the primary token hierarchy", () => {
     const sharedPlayArea = readFileSync(
-      resolve(process.cwd(), "factory/FactoryPlayArea.tsx"),
+      resolve(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared/factory/FactoryPlayArea.tsx"),
       "utf8",
     );
 
@@ -317,7 +317,7 @@ describe("Asset Factory production safety", () => {
 
   it("prompts for an unset Owner instead of rendering an em-dash void", () => {
     const sharedPlayArea = readFileSync(
-      resolve(process.cwd(), "factory/FactoryPlayArea.tsx"),
+      resolve(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared/factory/FactoryPlayArea.tsx"),
       "utf8",
     );
 
@@ -330,7 +330,7 @@ describe("Asset Factory production safety", () => {
 
   it("drops the deploy stage from the pipeline when the app has no execute action", () => {
     const sharedPlayArea = readFileSync(
-      resolve(process.cwd(), "factory/FactoryPlayArea.tsx"),
+      resolve(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared/factory/FactoryPlayArea.tsx"),
       "utf8",
     );
 

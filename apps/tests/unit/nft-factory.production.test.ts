@@ -183,7 +183,7 @@ describe("NFT Factory production contract", () => {
     expect(playArea).toContain("showExecuteAction={false}");
     expect(playArea).toContain("preventRepeatSigning");
     expect(playArea).toContain("requireVerifiedMetadataForSigning");
-    expect(readFileSync(resolve(ROOT, "shared/factory/FactoryPlayArea.tsx"), "utf8")).toContain(
+    expect(readFileSync(resolve(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared/factory/FactoryPlayArea.tsx"), "utf8")).toContain(
       "metadataObservation",
     );
     expect(playArea).not.toContain("releaseDeferredValue");

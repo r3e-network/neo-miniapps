@@ -14,7 +14,7 @@ function readPlayAreaStyles() {
   const path = require("node:path");
   const candidates = [
     path.resolve(process.cwd(), "apps/explorer/src/PlayArea.scss"),
-    path.resolve(process.cwd(), "../explorer/src/PlayArea.scss"),
+    path.resolve(process.cwd(), "apps/explorer/src/PlayArea.scss"),
   ];
   return fs.readFileSync(candidates.find((file: string) => fs.existsSync(file)) ?? candidates[0], "utf8");
 }

@@ -8,7 +8,7 @@ import PlayArea from "../../graveyard/src/PlayArea";
 (globalThis as typeof globalThis & { React: typeof React }).React = React;
 afterEach(() => cleanup());
 const REPO_ROOT = process.cwd().endsWith("/apps/shared")
-  ? resolve(process.cwd(), "../..")
+  ? resolve(process.cwd())
   : process.cwd();
 function t(k: string) {
   const m: Record<string, string> = {

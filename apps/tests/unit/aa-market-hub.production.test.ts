@@ -16,7 +16,7 @@ import {
 } from "../../aa-market-hub/src/aa-market-safety";
 import { useAAMarketHub } from "../../aa-market-hub/src/composables/useAAMarketHub";
 
-const APP = path.resolve(process.cwd(), "../aa-market-hub");
+const APP = path.resolve(process.cwd(), "apps/aa-market-hub");
 const MAINNET_MARKET = "0xae7afe3a85ab08bfd1d4907b35ae8b80c75b3a69";
 const TESTNET_MARKET = "0x8dbd4cf6fc47afc013e7fd7128d028db2985bddf";
 const MAINNET_CORE = "0x0268a387913b250166ddec032b03332690a1ef78";

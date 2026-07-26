@@ -97,7 +97,7 @@ describe("trustanchor PlayArea production surface", () => {
   it("keeps a clean, bright, responsive foreground and reduced motion", () => {
     const styles = readFileSync(
       resolve(
-        process.cwd().endsWith("/apps/shared") ? process.cwd() : resolve(process.cwd(), "apps/shared"),
+        process.cwd().endsWith("/apps/shared") ? process.cwd() : resolve(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared"),
         "../trustanchor/src/PlayArea.scss",
       ),
       "utf8",

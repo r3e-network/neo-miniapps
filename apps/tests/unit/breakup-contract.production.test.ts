@@ -3,7 +3,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 
 const root = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-  ? path.resolve(process.cwd(), "../..")
+  ? path.resolve(process.cwd())
   : process.cwd();
 const app = path.join(root, "apps/breakup-contract");
 const read = (name: string) => readFileSync(path.join(app, name), "utf8");

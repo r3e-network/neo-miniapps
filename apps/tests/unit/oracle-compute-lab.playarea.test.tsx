@@ -132,14 +132,14 @@ function state(overrides: Partial<Record<string, unknown>> = {}): ObservableStat
 
 function styles(): string {
   const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-    ? path.resolve(process.cwd(), "..")
+    ? path.resolve(process.cwd(), "apps")
     : path.resolve(process.cwd(), "apps");
   return readFileSync(path.join(appsRoot, "oracle-compute-lab/src/PlayArea.scss"), "utf8");
 }
 
 function source(): string {
   const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-    ? path.resolve(process.cwd(), "..")
+    ? path.resolve(process.cwd(), "apps")
     : path.resolve(process.cwd(), "apps");
   return readFileSync(path.join(appsRoot, "oracle-compute-lab/src/PlayArea.tsx"), "utf8");
 }

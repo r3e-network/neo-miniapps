@@ -78,13 +78,13 @@ function state(o: Partial<Record<string,unknown>> = {}): ObservableState {
 }
 function playAreaStyles(app: string): string {
   const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-    ? path.resolve(process.cwd(), "..")
+    ? path.resolve(process.cwd(), "apps")
     : path.resolve(process.cwd(), "apps");
   return readFileSync(path.join(appsRoot, app, "src/PlayArea.scss"), "utf8");
 }
 function playAreaSource(app: string): string {
   const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-    ? path.resolve(process.cwd(), "..")
+    ? path.resolve(process.cwd(), "apps")
     : path.resolve(process.cwd(), "apps");
   return readFileSync(path.join(appsRoot, app, "src/PlayArea.tsx"), "utf8");
 }

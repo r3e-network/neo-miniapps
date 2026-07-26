@@ -11,7 +11,7 @@ import PlayArea from "../../memorial-shrine/src/PlayArea";
 
 afterEach(() => cleanup());
 const REPO_ROOT = process.cwd().endsWith("/apps/shared")
-  ? resolve(process.cwd(), "../..")
+  ? resolve(process.cwd())
   : process.cwd();
 
 function t(key: string, params?: Record<string, string | number>) {

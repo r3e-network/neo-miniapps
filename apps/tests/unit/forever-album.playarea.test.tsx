@@ -320,7 +320,7 @@ describe("Forever Album PlayArea (v2 scene-driven)", () => {
     const fs = require("node:fs");
     const path = require("node:path");
     const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-      ? path.resolve(process.cwd(), "..")
+      ? path.resolve(process.cwd(), "apps")
       : path.resolve(process.cwd(), "apps");
     const source = fs.readFileSync(path.join(appsRoot, "forever-album/src/PlayArea.tsx"), "utf8");
     const asset = path.join(appsRoot, "forever-album/public/forever-album-memory-stage.webp");

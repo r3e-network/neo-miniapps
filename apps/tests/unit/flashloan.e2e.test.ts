@@ -7,7 +7,7 @@ import path from "node:path";
 
 function repoFile(relative: string) {
   const root = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-    ? path.resolve(process.cwd(), "../..")
+    ? path.resolve(process.cwd())
     : process.cwd();
   return path.join(root, relative);
 }

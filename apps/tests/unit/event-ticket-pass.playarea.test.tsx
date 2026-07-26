@@ -652,18 +652,18 @@ describe("Event Ticket Pass PlayArea (v2)", () => {
     const fs = require("node:fs");
     const path = require("node:path");
     const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-      ? path.resolve(process.cwd(), "..")
+      ? path.resolve(process.cwd(), "apps")
       : path.resolve(process.cwd(), "apps");
     const styles = fs.readFileSync(
       path.join(appsRoot, "event-ticket-pass/src/PlayArea.scss"),
       "utf8",
     );
     const sharedStyles = fs.readFileSync(
-      path.join(appsRoot, "shared/components-react/v2/v2.scss"),
+      path.join(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared/components-react/v2/v2.scss"),
       "utf8",
     );
     const motionStyles = fs.readFileSync(
-      path.join(appsRoot, "shared/styles/v2/_motion.scss"),
+      path.join(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared/styles/v2/_motion.scss"),
       "utf8",
     );
     const playArea = fs.readFileSync(

@@ -444,7 +444,7 @@ describe("Milestone Escrow PlayArea (v2 scene-driven)", () => {
     const path = require("node:path");
     const stylePath = [
       path.resolve(process.cwd(), "apps/milestone-escrow/src/PlayArea.scss"),
-      path.resolve(process.cwd(), "../milestone-escrow/src/PlayArea.scss"),
+      path.resolve(process.cwd(), "apps/milestone-escrow/src/PlayArea.scss"),
     ].find((candidate) => fs.existsSync(candidate));
     expect(stylePath).toBeTruthy();
     const styles = fs.readFileSync(stylePath, "utf8");

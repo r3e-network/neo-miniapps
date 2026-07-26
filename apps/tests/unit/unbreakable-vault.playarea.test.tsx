@@ -455,7 +455,7 @@ describe("Unbreakable Vault PlayArea (v2)", () => {
     const fs = require("node:fs");
     const path = require("node:path");
     const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-      ? path.resolve(process.cwd(), "..")
+      ? path.resolve(process.cwd(), "apps")
       : path.resolve(process.cwd(), "apps");
     const styles = fs.readFileSync(
       path.join(appsRoot, "unbreakable-vault/src/PlayArea.scss"),

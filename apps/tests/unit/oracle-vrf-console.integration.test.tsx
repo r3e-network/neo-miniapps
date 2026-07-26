@@ -83,7 +83,7 @@ function state(overrides: Partial<Record<string, unknown>> = {}): ObservableStat
 
 function appScssPath() {
   const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-    ? path.resolve(process.cwd(), "..")
+    ? path.resolve(process.cwd(), "apps")
     : path.resolve(process.cwd(), "apps");
   return path.join(appsRoot, "oracle-vrf-console", "src/PlayArea.scss");
 }

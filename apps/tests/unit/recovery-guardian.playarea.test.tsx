@@ -251,7 +251,7 @@ describe("recovery-guardian designed journey", () => {
   it("ships warm, high-contrast, reduced-motion styling without an oversized primary control", () => {
     const candidates = [
       resolve(process.cwd(), "apps/recovery-guardian/src/PlayArea.scss"),
-      resolve(process.cwd(), "../recovery-guardian/src/PlayArea.scss"),
+      resolve(process.cwd(), "apps/recovery-guardian/src/PlayArea.scss"),
     ];
     const stylePath = candidates.find(existsSync);
     expect(stylePath).toBeTruthy();

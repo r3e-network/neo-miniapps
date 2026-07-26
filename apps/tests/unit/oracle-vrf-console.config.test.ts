@@ -7,7 +7,7 @@ type LocalizedMessage = { en: string; zh: string };
 
 function appPath(file: string) {
   const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-    ? path.resolve(process.cwd(), "..")
+    ? path.resolve(process.cwd(), "apps")
     : path.resolve(process.cwd(), "apps");
   return path.join(appsRoot, "oracle-vrf-console", file);
 }

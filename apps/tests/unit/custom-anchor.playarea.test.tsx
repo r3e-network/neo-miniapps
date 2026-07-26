@@ -43,7 +43,7 @@ function state(o: Partial<Record<string, unknown>> = {}): ObservableState {
 }
 
 const appRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-  ? path.resolve(process.cwd(), "../custom-anchor")
+  ? path.resolve(process.cwd(), "apps/custom-anchor")
   : path.resolve(process.cwd(), "apps/custom-anchor");
 
 describe("custom-anchor PlayArea (v2)", () => {

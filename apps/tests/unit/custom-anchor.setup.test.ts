@@ -173,7 +173,7 @@ describe("custom-anchor production orchestration", () => {
   it("uses pinned contexts, durable tx capture, and exact outcome recovery surfaces", () => {
     const source = readFileSync(
       resolve(
-        process.cwd().endsWith("/apps/shared") ? process.cwd() : resolve(process.cwd(), "apps/shared"),
+        process.cwd().endsWith("/apps/shared") ? process.cwd() : resolve(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared"),
         "../custom-anchor/src/main.tsx",
       ),
       "utf8",

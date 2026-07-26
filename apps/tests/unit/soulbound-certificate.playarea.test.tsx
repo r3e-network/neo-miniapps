@@ -220,7 +220,7 @@ function state(overrides: Partial<Record<string, unknown>> = {}): ObservableStat
 function readPlayAreaStyles() {
   const candidates = [
     path.resolve(process.cwd(), "apps/soulbound-certificate/src/PlayArea.scss"),
-    path.resolve(process.cwd(), "../soulbound-certificate/src/PlayArea.scss"),
+    path.resolve(process.cwd(), "apps/soulbound-certificate/src/PlayArea.scss"),
     path.resolve(__dirname, "../../soulbound-certificate/src/PlayArea.scss"),
   ];
   const found = candidates.find((candidate) => fs.existsSync(candidate));

@@ -644,7 +644,7 @@ describe("Flash Loan PlayArea (v2 scene-driven)", () => {
     const path = require("node:path");
     const stylePath = [
       path.resolve(process.cwd(), "apps/flashloan/src/PlayArea.scss"),
-      path.resolve(process.cwd(), "../flashloan/src/PlayArea.scss"),
+      path.resolve(process.cwd(), "apps/flashloan/src/PlayArea.scss"),
     ].find((candidate) => fs.existsSync(candidate));
     expect(stylePath).toBeTruthy();
     const styles = fs.readFileSync(stylePath, "utf8");

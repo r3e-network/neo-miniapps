@@ -261,7 +261,7 @@ describe("Explorer PlayArea production workspace", () => {
   it("uses the shared lightweight controls, real WebP asset, and responsive data layout", () => {
     const fs = require("node:fs");
     const path = require("node:path");
-    const appRoot = path.resolve(process.cwd(), "../explorer");
+    const appRoot = path.resolve(process.cwd(), "apps/explorer");
     const source = fs.readFileSync(path.join(appRoot, "src/PlayArea.tsx"), "utf8");
     const styles = fs.readFileSync(path.join(appRoot, "src/PlayArea.scss"), "utf8");
 

@@ -9,7 +9,7 @@ import {
 
 const contractManifest = JSON.parse(
   readFileSync(
-    path.resolve(process.cwd(), "..", "..", "contracts", "build", "MiniAppSelfLoan.manifest.json"),
+    path.resolve(process.cwd(), "apps", "..", "contracts", "build", "MiniAppSelfLoan.manifest.json"),
     "utf8",
   ),
 );

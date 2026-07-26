@@ -6,7 +6,7 @@ import { manifest } from "../../wallet-health/src/manifest";
 function appFile(relativePath: string): string {
   const sharedRoot = process.cwd().endsWith("/apps/shared")
     ? process.cwd()
-    : resolve(process.cwd(), "apps/shared");
+    : resolve(process.cwd(), "node_modules/@r3e-network/neo-miniapp-shared");
   return readFileSync(resolve(sharedRoot, `../wallet-health/${relativePath}`), "utf8");
 }
 

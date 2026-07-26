@@ -56,7 +56,7 @@ describe("aa-session-key-lab integration", () => {
 
   it("has a reduced-motion guard in the scoped stylesheet", () => {
     const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-      ? path.resolve(process.cwd(), "..")
+      ? path.resolve(process.cwd(), "apps")
       : path.resolve(process.cwd(), "apps");
     const css = readFileSync(path.join(appsRoot, "aa-session-key-lab/src/PlayArea.scss"), "utf8");
     expect(css).toMatch(/prefers-reduced-motion/);

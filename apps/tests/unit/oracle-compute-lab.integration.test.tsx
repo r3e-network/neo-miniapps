@@ -28,7 +28,7 @@ describe("oracle-compute-lab integration: dispatch + state", () => {
   });
   it("has reduced-motion CSS guard", () => {
     const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-      ? path.resolve(process.cwd(), "..")
+      ? path.resolve(process.cwd(), "apps")
       : path.resolve(process.cwd(), "apps");
     const s = readFileSync(path.join(appsRoot, "oracle-compute-lab/src/PlayArea.scss"), "utf8");
     expect(s).toMatch(/prefers-reduced-motion/);

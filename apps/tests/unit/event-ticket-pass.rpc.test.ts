@@ -14,7 +14,7 @@ import {
 const TXID = `0x${"a".repeat(64)}`;
 
 const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-  ? path.resolve(process.cwd(), "..")
+  ? path.resolve(process.cwd(), "apps")
   : path.resolve(process.cwd(), "apps");
 const contractManifest = JSON.parse(
   fs.readFileSync(

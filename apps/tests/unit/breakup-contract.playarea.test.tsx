@@ -78,7 +78,7 @@ function state(o: Partial<Record<string, unknown>> = {}): ObservableState {
 }
 
 const appRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-  ? path.resolve(process.cwd(), "../breakup-contract")
+  ? path.resolve(process.cwd(), "apps/breakup-contract")
   : path.resolve(process.cwd(), "apps/breakup-contract");
 
 describe("breakup-contract PlayArea (v2)", () => {

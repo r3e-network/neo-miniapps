@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 
-const APP = path.resolve(process.cwd(), "../neo-swap");
+const APP = path.resolve(process.cwd(), "apps/neo-swap");
 
 function read(relativePath: string) {
   return readFileSync(path.join(APP, relativePath), "utf8");

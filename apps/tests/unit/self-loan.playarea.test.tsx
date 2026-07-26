@@ -57,14 +57,14 @@ function state(overrides: Partial<Record<string, unknown>> = {}): ObservableStat
 
 function appScssPath(app: string) {
   const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-    ? path.resolve(process.cwd(), "..")
+    ? path.resolve(process.cwd(), "apps")
     : path.resolve(process.cwd(), "apps");
   return path.join(appsRoot, app, "src/PlayArea.scss");
 }
 
 function repoFilePath(...segments: string[]) {
   const repoRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-    ? path.resolve(process.cwd(), "..", "..")
+    ? path.resolve(process.cwd(), "apps", "..")
     : process.cwd();
   const direct = path.join(repoRoot, ...segments);
   if (existsSync(direct)) return direct;

@@ -422,7 +422,7 @@ describe("Quadratic Funding PlayArea (v2 scene-driven)", () => {
     const fs = require("node:fs");
     const path = require("node:path");
     const appsRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-      ? path.resolve(process.cwd(), "..")
+      ? path.resolve(process.cwd(), "apps")
       : path.resolve(process.cwd(), "apps");
     const styles = fs.readFileSync(path.join(appsRoot, "quadratic-funding/src/PlayArea.scss"), "utf8");
     expect(styles).toContain("@use \"@shared/styles/v2/motion\"");

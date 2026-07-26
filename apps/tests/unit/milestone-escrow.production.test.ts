@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 
-const ROOT = path.resolve(process.cwd(), "../..");
+const ROOT = path.resolve(process.cwd());
 const read = (file: string) => fs.readFileSync(path.join(ROOT, file), "utf8");
 
 describe("milestone-escrow production boundary", () => {

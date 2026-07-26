@@ -3,7 +3,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 
 const appRoot = process.cwd().endsWith(`${path.sep}apps${path.sep}shared`)
-  ? path.resolve(process.cwd(), "../timestamp-proof")
+  ? path.resolve(process.cwd(), "apps/timestamp-proof")
   : path.resolve(process.cwd(), "apps/timestamp-proof");
 
 describe("timestamp-proof production contract", () => {
