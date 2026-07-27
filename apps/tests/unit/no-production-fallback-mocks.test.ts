@@ -63,3 +63,33 @@ describe("Production data guardrails", () => {
     expect(sources).not.toMatch(/from the action console/i);
   });
 });
+
+describe("Official brand assets", () => {
+  it("uses the official Neo icon as the app-source logo for Neo governance miniapps", () => {
+    // The platform half of this parity check - that everything the host serves
+    // for these slugs is the official mark - stays in the platform. This half
+    // pins the app source it is compared against.
+    const officialNeoIcon = fs.readFileSync(
+      path.join(
+        repoRoot,
+        "node_modules/@r3e-network/neo-miniapp-shared/assets/tokens/neo-icon.svg",
+      ),
+      "utf8",
+    );
+
+    for (const slug of ["council-governance", "gov-merc"]) {
+      expect(read(`apps/${slug}/public/logo.svg`).trim()).toBe(officialNeoIcon.trim());
+    }
+  });
+});
+
+describe("Memorial Shrine embedded flows", () => {
+  it("keeps the createMemorial and payTribute wallet flows in the embedded app", () => {
+    // The platform half - that the host does not duplicate these with a generic
+    // operation panel - stays in the platform's miniapp-definitions guard.
+    const embeddedFlow = read("apps/memorial-shrine/src/composables/useMemorialShrine.ts");
+
+    expect(embeddedFlow).toContain('"createMemorial"');
+    expect(embeddedFlow).toContain('"payTribute"');
+  });
+});
