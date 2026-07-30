@@ -301,21 +301,11 @@ namespace NeoMiniAppPlatform.Contracts.Tests
             Assert.NotEqual(UInt160.Zero, hash);
         }
 
-        // -----------------------------------------------------------------
-        // All four Platform contracts: must deploy clean (manifest + NEF valid).
-        // -----------------------------------------------------------------
-        [Theory]
-        [InlineData("PlatformAnchor")]
-        [InlineData("PlatformDeFi")]
-        [InlineData("PlatformGame")]
-        [InlineData("PlatformSocial")]
-        public void EveryPlatformContract_DeploysClean(string name)
-        {
-            var engine = new TestEngine(true);
-            var (nef, manifest) = Load(name);
-            var hash = engine.GetDeployHash(nef, manifest);
-            Assert.NotNull(hash);
-            Assert.NotEqual(UInt160.Zero, hash);
-        }
+        // The platform contracts (PlatformAnchor, PlatformDeFi, PlatformGame,
+        // PlatformSocial) used to be checked here too. They are built in
+        // neo-os-contracts now and their artifacts are not in this repo's build
+        // output, so the equivalent check lives there as
+        // PlatformContractDeployTests - covering every platform contract, not the
+        // four this file happened to name.
     }
 }
