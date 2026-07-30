@@ -1,7 +1,0 @@
-/Users/jinghuiliao/git/r3e/neo-miniapps/apps/wallet-health/README.md
-/Users/jinghuiliao/git/r3e/neo-miniapps/apps/wallet-health/README.zh-CN.md
-/Users/jinghuiliao/git/r3e/neo-miniapps/apps/wallet-health/index.html
-/Users/jinghuiliao/git/r3e/neo-miniapps/contracts/MiniAppEventTicketPass/README.md
-/Users/jinghuiliao/git/r3e/neo-miniapps/contracts/MiniAppMilestoneEscrow/README.md
-/Users/jinghuiliao/git/r3e/neo-miniapps/contracts/MiniAppQuadraticFunding/README.md
-/Users/jinghuiliao/git/r3e/neo-miniapps/contracts/MiniAppSoulboundCertificate/README.md
